@@ -20,3 +20,10 @@ Programm stack of project:
 
 ## API key 🔑
 in case API for fetching news i choosed this [NewsAPI](https://newsapi.org/)
+
+## Project architecture
+![logs](https://github.com/MishaNikolaev/BeritaNews/blob/master/assets/mvvm.png)
+
+## Use cases diagram
+
+![logs](https://github.com/MishaNikolaev/BeritaNews/blob/master/assets/diagram.jpg)
