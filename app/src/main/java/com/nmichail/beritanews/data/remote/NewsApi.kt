@@ -10,4 +10,12 @@ interface NewsApi {
         @Query("country") country: String,
         @Query("apiKey") apiKey: String
     ): NewsDto
+
+    @GET("top-headlines")
+    suspend fun getTopHeadlinesByCategory(
+        @Query("country") country: String,
+        @Query("category") category: String,
+        @Query("apiKey") apiKey: String
+    ): NewsDto
+
 }

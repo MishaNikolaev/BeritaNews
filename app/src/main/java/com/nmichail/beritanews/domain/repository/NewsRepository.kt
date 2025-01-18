@@ -6,4 +6,5 @@ interface NewsRepository {
 
     suspend fun getTopHeadlines(country: String, apiKey: String): List<Article>
 
+    suspend fun getTopHeadlinesByCategory(country: String, category: String, apiKey: String): List<Article>
 }

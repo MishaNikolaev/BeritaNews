@@ -9,6 +9,15 @@ class NewsRepositoryImpl(
     private val api: NewsApi
 ) : NewsRepository {
     override suspend fun getTopHeadlines(country: String, apiKey: String): List<Article> {
-        return api.getTopHeadlines(country, apiKey).articles.map { it.toDomain() }
+        val response = api.getTopHeadlines(country, apiKey)
+        if (response.articles.isEmpty()) {
+            throw Exception("No articles found for country: $country")
+        }
+        return response.articles.map { it.toDomain() }
+    }
+
+    override suspend fun getTopHeadlinesByCategory(country: String, category: String, apiKey: String): List<Article> {
+        val response = api.getTopHeadlinesByCategory(country, category, apiKey)
+        return response.articles.map { it.toDomain() }
     }
 }
