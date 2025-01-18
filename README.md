@@ -8,6 +8,7 @@ Programm stack of project:
 - Coroutines
 - Room
 - Retrofit
+- DataStore
 
 
 # UI 🖥
